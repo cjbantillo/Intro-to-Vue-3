@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vue Mastery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
@@ -12,11 +12,11 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
-      
+
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <img v-bind:src="image" alt="Product Image">
+            <img v-bind:src="image" alt="Product Image" />
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
@@ -25,13 +25,14 @@
             <ul>
               <li v-for="details in details">{{ details }}</li>
             </ul>
-            <div v-for="variant in variants" :key="variant.id"> {{variant.color}}</div>
-            <!-- variant here is a variable and variants is the object we want to loop -->
-
             <ul>
-              <li v-for="(size, index) in sizes" :key="index"> {{size}}</li>
+              <li v-for="(size, index) in sizes" :key="index">{{size}}</li>
             </ul>
-          </div> 
+            <div v-for="variant in variants" :key="variant.id">
+              {{variant.color}}
+            </div>
+            <!-- variant here is a variable and variants is the object we want to loop -->
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +42,7 @@
 
     <!-- Mount App -->
     <script>
-      const mountedApp = app.mount('#app')
+      const mountedApp = app.mount("#app");
     </script>
   </body>
 </html>

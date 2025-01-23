@@ -22,7 +22,16 @@
             <h1>{{ product }}</h1>
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
-          </div>
+            <ul>
+              <li v-for="details in details">{{ details }}</li>
+            </ul>
+            <div v-for="variant in variants" :key="variant.id"> {{variant.color}}</div>
+            <!-- variant here is a variable and variants is the object we want to loop -->
+
+            <ul>
+              <li v-for="(size, index) in sizes" :key="index"> {{size}}</li>
+            </ul>
+          </div> 
         </div>
       </div>
     </div>

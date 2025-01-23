@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vue Mastery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
@@ -16,20 +15,12 @@
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <img :src="image" alt="Product Image">
+            <img v-bind:src="image" alt="Product Image">
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
-            <p v-if="inventory > 10">In Stock</p> 
-            <!-- if inventory is greater than 10 ex. 11 and up it display In Stock -->
-            <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
-            <!-- if inventory is less than or equal to 10 and greater than 0 ex. 1-10 it display Almost sold out! -->
+            <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
-            <!-- if inventory is 0 it display Out of Stock -->
-     \
-            <p v-if="onSale">On Sale!</p>
-            <!-- if onSale is true it display On Sale! -->
-           
           </div>
         </div>
       </div>

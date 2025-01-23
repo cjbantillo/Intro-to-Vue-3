@@ -20,12 +20,16 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
-            <p v-if="inventory > 10">In Stock</p>
+            <p v-if="inventory > 10">In Stock</p> 
+            <!-- if inventory is greater than 10 ex. 11 and up it display In Stock -->
             <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+            <!-- if inventory is less than or equal to 10 and greater than 0 ex. 1-10 it display Almost sold out! -->
             <p v-else>Out of Stock</p>
-            <!-- solution -->
+            <!-- if inventory is 0 it display Out of Stock -->
+     \
             <p v-if="onSale">On Sale!</p>
-            <!-- solution -->
+            <!-- if onSale is true it display On Sale! -->
+           
           </div>
         </div>
       </div>

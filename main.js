@@ -33,16 +33,5 @@ const app = Vue.createApp({
         inStock() {
             return this.variants[this.selectedVariant].quantity
         },
-<<<<<<< HEAD
-        // solution
-        saleMessage() {
-            if (this.onSale) {
-                return this.brand + ' ' + this.product + ' is on sale.'
-            }
-            return ''
-        }
-        // solution
-=======
->>>>>>> bc68ec8034f131a1b21d6d43497decc868b335c9
     }
 })

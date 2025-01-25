@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            cart:0,
+            cart: 0,
             product: 'Socks',
             brand: 'Vue Mastery',
             selectedVariant: 0,
@@ -33,6 +33,7 @@ const app = Vue.createApp({
         inStock() {
             return this.variants[this.selectedVariant].quantity
         },
+<<<<<<< HEAD
         // solution
         saleMessage() {
             if (this.onSale) {
@@ -41,5 +42,7 @@ const app = Vue.createApp({
             return ''
         }
         // solution
+=======
+>>>>>>> bc68ec8034f131a1b21d6d43497decc868b335c9
     }
 })

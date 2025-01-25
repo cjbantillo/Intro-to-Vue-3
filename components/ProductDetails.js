@@ -6,6 +6,7 @@ app.component('product-details', {
       required: true
     }
   },
+  
   template:
   /*html*/
   `

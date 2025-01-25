@@ -34,7 +34,7 @@ const app = Vue.createApp({
             return this.variants[this.selectedVariant].quantity
         },
         // solution
-        sale() {
+        saleMessage() {
             if (this.onSale) {
                 return this.brand + ' ' + this.product + ' is on sale.'
             }
